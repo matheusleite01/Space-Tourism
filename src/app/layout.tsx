@@ -1,19 +1,9 @@
 "use client";
-import { Bellefair, Barlow_Condensed } from "next/font/google";
 import StyledComponentsRegistry from "./registry";
 import GlobalStyle from "../styles/global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
-
-const bellefair = Bellefair({
-  weight: "400",
-  subsets:["latin"]
-})
-
-const barlow = Barlow_Condensed({
-  weight: "400",
-  subsets:["latin"]
-})
+import Header from "@/components/Header/Header";
 
 export default function RootLayout({
   children,
@@ -22,10 +12,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={bellefair.className}>
+      <body>
         <ThemeProvider theme={theme}>
           <StyledComponentsRegistry>
             <GlobalStyle />
+            <Header />
             {children}
           </StyledComponentsRegistry>
         </ThemeProvider>
