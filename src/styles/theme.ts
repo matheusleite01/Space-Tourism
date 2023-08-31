@@ -6,7 +6,7 @@ const bellefair = Bellefair({
 });
 
 const barlow = Barlow_Condensed({
-  weight: ["400", '700'],
+  weight: ["400", "700"],
   subsets: ["vietnamese"],
 });
 
@@ -22,21 +22,29 @@ export const theme = {
       barlowCondensed: barlow.style.fontFamily,
     },
     size: {
-    size_150px: "9.375rem",
-    size_100px: "6.25rem",
-    size_56px: "3.5rem",
-    size_32px: "2rem",
-    size_28px: "1.75rem",
-    size_16px: "1rem",
-    size_14px: "0.875rem",
+      size_150px: "9.375rem",
+      size_100px: "6.25rem",
+      size_80px: "5rem",
+      size_56px: "3.5rem",
+      size_32px: "2rem",
+      size_28px: "1.75rem",
+      size_20px: "1.25rem",
+      size_18px: "1.125rem",
+      size_16px: "1rem",
+      size_15px: "0.938rem",
+      size_14px: "0.875rem",
     },
     fontWeight: {
       w400: "400",
-      w700: "700"
+      w700: "700",
+    },
+    responsiveDevice: {
+      w1024:'64rem',
+      w760: '47.5rem'
     }
   },
 };
 
-console.log(theme.font.family.barlow)
+
 
 

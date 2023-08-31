@@ -32,9 +32,13 @@ a {
   text-decoration: none;
 }
 
+h1{
+  font-family: ${theme.font.family.barlow};
+  font-size: ${theme.font.size.size_150px};
+}
+
+
 body {
-  background: url(${image.src}) no-repeat center ;
-  background-size: cover;
   min-height: 100vh;
   color: ${theme.color.colorWhite};
 } 
@@ -42,6 +46,13 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+@media screen and (max-width: 760px){
+  h1{
+  font-size: ${theme.font.size.size_80px};
+}
+
 }
  `;
 

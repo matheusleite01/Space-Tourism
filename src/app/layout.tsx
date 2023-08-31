@@ -3,7 +3,7 @@ import StyledComponentsRegistry from "./registry";
 import GlobalStyle from "../styles/global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
-import Header from "@/components/Header/Header";
+import Header from "@/components/Header/Index";
 
 export default function RootLayout({
   children,
@@ -17,7 +17,7 @@ export default function RootLayout({
           <StyledComponentsRegistry>
             <GlobalStyle />
             <Header />
-            {children}
+            <main>{children}</main>
           </StyledComponentsRegistry>
         </ThemeProvider>
       </body>
