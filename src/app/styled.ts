@@ -55,8 +55,8 @@ export const TitleContainer = styled.div`
   }
 
   p {
-    max-width: 374px;
-    font-family: ${theme.font.family.barlowCondensed};
+    max-width: 444px;
+    font-family: ${theme.font.family.barlow};
     font-size: ${theme.font.size.size_18px};
     color: ${theme.color.colorNeutral};
     line-height: 32px;

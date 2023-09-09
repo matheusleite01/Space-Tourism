@@ -5,7 +5,7 @@ export const ButtonStyle = styled.button`
   position: relative;
   width: 274px;
   height: 274px;
-  font-family: ${theme.font.family.barlow};
+  font-family: ${theme.font.family.bellefair};
   font-size: ${theme.font.size.size_32px};
   color: ${theme.color.colorBlack};
   letter-spacing: 2px;

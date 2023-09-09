@@ -33,7 +33,7 @@ a {
 }
 
 h1{
-  font-family: ${theme.font.family.barlow};
+  font-family: ${theme.font.family.bellefair};
   font-size: ${theme.font.size.size_150px};
 }
 
@@ -48,11 +48,40 @@ body {
   padding: 0 1rem;
 }
 
-@media screen and (max-width: 760px){
-  h1{
-  font-size: ${theme.font.size.size_80px};
+.describe{
+  font-family: ${theme.font.family.barlowCondensed};
+  font-size: ${theme.font.size.size_28px};
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
 }
 
+.spanDescribe {
+  font-family: ${theme.font.family.barlowCondensed};
+  font-size: ${theme.font.size.size_28px};
+  font-weight: ${theme.font.fontWeight.w700};
+  letter-spacing: 4.725px;
+  opacity: 0.25;
+}
+
+@media screen and (max-width:${theme.font.responsiveDevice.w1024}){
+  .describe{
+  font-size: ${theme.font.size.size_20px}; 
+  }
+  .spanDescribe{
+  font-size: ${theme.font.size.size_20px};
+  }
+}
+
+@media screen and (max-width:${theme.font.responsiveDevice.w760}){
+    h1{
+    font-size: ${theme.font.size.size_80px};
+  }
+  .describe{
+  font-size: ${theme.font.size.size_16px}; 
+  }
+  .spanDescribe{
+  font-size: ${theme.font.size.size_16px};
+  }
 }
  `;
 

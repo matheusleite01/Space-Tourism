@@ -5,10 +5,33 @@ import Logo from "@/assets/shared/Logo";
 import Link from "next/link";
 import IconHanburger from "@/assets/shared/IconHanburger";
 import IconClose from "@/assets/shared/IconClose";
+import NavLink from "../NavLink";
 
 const Header = () => {
   const [isOpen, setIsopen] = React.useState(false);
-
+  const links = [
+    {
+      id: '01',
+      href: "/",
+      label: "HOME",
+      
+    },
+    {
+      id:'02',
+      href: "/destination",
+      label: "DESTINATION",
+    },
+    {
+      id:'03',
+      href: "/crew",
+      label: "CREW",
+    },
+    {
+      id:'04',
+      href: "/technology",
+      label: "TECHNOLOGY",
+    },
+  ];
 
   return (
     <H.Container>
@@ -20,26 +43,14 @@ const Header = () => {
       </H.MenuBurger>
       <H.NavList className={isOpen ? "open" : ""}>
         <H.List>
-          <H.ListItem>
-            <Link href="/" className="active open">
-              <span>00</span>HOME
-            </Link>
-          </H.ListItem>
-          <H.ListItem>
-            <Link href="/destination">
-              <span>01</span>DESTINATION
-            </Link>
-          </H.ListItem>
-          <H.ListItem>
-            <Link href="/crew">
-              <span>02</span>CREW
-            </Link>
-          </H.ListItem>
-          <H.ListItem>
-            <Link href="/technology">
-              <span>03</span>TECHNOLOGY
-            </Link>
-          </H.ListItem>
+          {links.map(({ href, label, id }) => (
+            <H.ListItem key={href}>
+              <NavLink isOpen={isOpen} activeClassname='active' href={href}>
+                <span>{id}</span>
+                {label}
+                </NavLink>
+            </H.ListItem>
+          ))}
         </H.List>
       </H.NavList>
     </H.Container>

@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 import * as H from "./styled";
 import Button from "@/components/Button/Index";
 

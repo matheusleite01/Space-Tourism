@@ -1,14 +1,19 @@
-import { Bellefair, Barlow_Condensed } from "next/font/google";
+import { Bellefair, Barlow_Condensed, Barlow } from "next/font/google";
 
 const bellefair = Bellefair({
   weight: "400",
   subsets: ["latin"],
 });
 
-const barlow = Barlow_Condensed({
+const barlowCondesed = Barlow_Condensed({
   weight: ["400", "700"],
-  subsets: ["vietnamese"],
+  subsets: ["latin"],
 });
+
+const barlow = Barlow({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 export const theme = {
   color: {
@@ -18,8 +23,9 @@ export const theme = {
   },
   font: {
     family: {
-      barlow: bellefair.style.fontFamily,
-      barlowCondensed: barlow.style.fontFamily,
+      bellefair: bellefair.style.fontFamily,
+      barlowCondensed: barlowCondesed.style.fontFamily,
+      barlow: barlow.style.fontFamily
     },
     size: {
       size_150px: "9.375rem",
@@ -44,7 +50,3 @@ export const theme = {
     }
   },
 };
-
-
-
-

@@ -97,11 +97,18 @@ export const ListItem = styled.li`
 
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
     a {
+      &:hover::after {
+        width: 4px;
+        height: 31px;
+        left: 214px;
+        bottom: auto;
+        opacity: 0.5021;
+        background: #fff;
+      }
       &.active.open::after {
         width: 4px;
         height: 31px;
-        right: -148px;
-        left: auto;
+        left: 214px;
         bottom: auto;
       }
     }
