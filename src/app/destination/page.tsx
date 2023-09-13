@@ -1,5 +1,6 @@
 "use client";
 import * as D from "./styled";
+import DescribeTitle from '@/components/DescribeTitle/Index';
 import DestinationNav from "@/components/DestinationNav/Index";
 
 const Destination = () => {
@@ -7,10 +8,7 @@ const Destination = () => {
     <D.ImgBg>
       <D.Container className="container">
         <div>
-          <D.DescribeTitle>
-            <span className="spanDescribe">01</span>
-            <h2 className="describe">Pick your destination</h2>
-          </D.DescribeTitle>
+          <DescribeTitle id="01" title="Pick your destination"/>
           <DestinationNav />
         </div>
       </D.Container>

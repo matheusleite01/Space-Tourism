@@ -44,7 +44,7 @@ const Header = () => {
       <H.NavList className={isOpen ? "open" : ""}>
         <H.List>
           {links.map(({ href, label, id }) => (
-            <H.ListItem key={href}>
+            <H.ListItem key={id}>
               <NavLink isOpen={isOpen} activeClassname='active' href={href}>
                 <span>{id}</span>
                 {label}

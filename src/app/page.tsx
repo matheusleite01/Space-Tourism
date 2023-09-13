@@ -4,6 +4,7 @@ import * as H from "./styled";
 import Button from "@/components/Button/Index";
 
 export default function Home() {
+ 
   return (
     <H.ImgBg>
       <H.Container className="container">

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/theme";
 import imageDesktop from "../../assets/destination/background-destination-desktop.jpg";
 import imageTablet from "../../assets/destination/background-destination-tablet.jpg";
-import imageMobile from "../../assets/destination/background-destination-tablet.jpg";
+import imageMobile from "../../assets/destination/background-destination-mobile.jpg";
 
 export const ImgBg = styled.section`
   display: block;
@@ -35,16 +35,5 @@ export const Container = styled.div`
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
     margin-top: 89px;
-  }
-`;
-
-export const DescribeTitle = styled.div`
-  display: flex;
-  gap: 28px;
-  margin-bottom: 64px;
-  @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
-    justify-content: center;
-    gap: 18px;
-    margin-bottom: 32px;
   }
 `;
