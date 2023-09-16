@@ -52,6 +52,11 @@ body {
    .container {
     padding: 0;
    }
+
+   a {
+    font-size: ${theme.font.size.size_14px};
+ 
+   }
 }
 
 @media screen and (max-width:${theme.font.responsiveDevice.w760}){

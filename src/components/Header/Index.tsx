@@ -45,7 +45,7 @@ const Header = () => {
         <H.List>
           {links.map(({ href, label, id }) => (
             <H.ListItem key={id}>
-              <NavLink isOpen={isOpen} activeClassname='active' href={href}>
+              <NavLink isOpen={isOpen} setIsopen={setIsopen} activeClassname='active' href={href}>
                 <span>{id}</span>
                 {label}
                 </NavLink>

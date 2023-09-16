@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { theme } from "../styles/theme";
-import imageDesktop from "../assets/home/background-home-desktop.jpg";
-import imageTablet from "../assets/home/background-home-tablet.jpg";
-import imageMobile from "../assets/home/background-home-mobile.jpg";
+import imageDesktop from "../assets/home/background-home-desktop.png";
+import imageTablet from "../assets/home/background-home-tablet.png";
+import imageMobile from "../assets/home/background-home-mobile.png";
 
 export const ImgBg = styled.section`
   position: fixed;

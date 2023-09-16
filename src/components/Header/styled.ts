@@ -50,7 +50,7 @@ export const List = styled.ul`
   align-items: center;
   gap: 3.125rem;
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1400px) {
     &::before {
       content: "";
       position: absolute;
@@ -94,8 +94,16 @@ export const ListItem = styled.li`
     letter-spacing: 2.7px;
     margin-right: 11px;
   }
+  @media screen and (max-width: ${theme.font.responsiveDevice.w1024}){
+    span {
+      display: none;
+    }
+  }
 
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
+    span {
+      display: inline;
+    }
     a {
       &:hover::after {
         width: 4px;
