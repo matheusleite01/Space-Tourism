@@ -48,6 +48,12 @@ body {
   padding: 0 1rem;
 }
 
+@media screen and (max-width:${theme.font.responsiveDevice.w1024}){
+   .container {
+    padding: 0;
+   }
+}
+
 @media screen and (max-width:${theme.font.responsiveDevice.w760}){
     h1{
     font-size: ${theme.font.size.size_80px};
