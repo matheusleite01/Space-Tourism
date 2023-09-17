@@ -15,6 +15,7 @@ export const ImgBg = styled.section`
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     background: url(${imageTablet.src}) no-repeat center;
     background-size: cover;
+    overflow-y: scroll
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
     background: url(${imageMobile.src}) no-repeat center;
@@ -32,11 +33,11 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 156px;
-    margin-top: 195px;
+    margin-top: 195px !important; 
     text-align: center;
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
-    margin-top: 130px;
+    margin-top: 130px !important;
     gap: 80px;
   }
 `;
