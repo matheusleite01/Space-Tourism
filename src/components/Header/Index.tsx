@@ -11,23 +11,22 @@ const Header = () => {
   const [isOpen, setIsopen] = React.useState(false);
   const links = [
     {
-      id: '01',
+      id: "01",
       href: "/",
       label: "HOME",
-      
     },
     {
-      id:'02',
+      id: "02",
       href: "/destination",
       label: "DESTINATION",
     },
     {
-      id:'03',
+      id: "03",
       href: "/crew",
       label: "CREW",
     },
     {
-      id:'04',
+      id: "04",
       href: "/technology",
       label: "TECHNOLOGY",
     },
@@ -35,9 +34,11 @@ const Header = () => {
 
   return (
     <H.Container>
-      <Link href="/">
-        <Logo />
-      </Link>
+      <H.LogoContainer role="logo">
+        <Link href="/">
+          <Logo />
+        </Link>
+      </H.LogoContainer>
       <H.MenuBurger onClick={() => setIsopen(!isOpen)}>
         {isOpen ? <IconClose /> : <IconHanburger />}
       </H.MenuBurger>
@@ -45,10 +46,15 @@ const Header = () => {
         <H.List>
           {links.map(({ href, label, id }) => (
             <H.ListItem key={id}>
-              <NavLink isOpen={isOpen} setIsopen={setIsopen} activeClassname='active' href={href}>
+              <NavLink
+                isOpen={isOpen}
+                setIsopen={setIsopen}
+                activeClassname="active"
+                href={href}
+              >
                 <span>{id}</span>
                 {label}
-                </NavLink>
+              </NavLink>
             </H.ListItem>
           ))}
         </H.List>

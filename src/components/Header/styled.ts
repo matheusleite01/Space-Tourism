@@ -1,5 +1,50 @@
 import { theme } from "@/styles/theme";
-import styled from "styled-components";
+import { styled, keyframes } from "styled-components";
+
+const animaLogo = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const animaNav = keyframes`
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const animaMobile = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const animaLine = keyframes`
+  from{
+    opacity: 0;
+    width: 0px;
+  }
+  to{
+    opacity: 0.2515;
+    width: 470px;
+  }
+  
+`;
 
 export const Container = styled.header`
   position: relative;
@@ -16,10 +61,16 @@ export const Container = styled.header`
   }
 `;
 
+export const LogoContainer = styled.div`
+  animation: ${animaLogo} 2s forwards;
+`;
+
 export const NavList = styled.nav`
+  opacity: 0;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.774227142333984px);
   padding: 2.438rem 10.438rem 2.438rem 9.375rem;
+  animation: ${animaNav} 1.5s ease-in 1s forwards;
 
   &.open {
     display: block;
@@ -30,6 +81,7 @@ export const NavList = styled.nav`
     right: 0;
     top: 0;
     z-index: 5;
+    animation: ${animaMobile} 1s forwards;
 
     ul {
       flex-direction: column;
@@ -59,7 +111,8 @@ export const List = styled.ul`
       width: 473px;
       height: 1px;
       background: ${theme.color.colorWhite};
-      opacity: 0.2515;
+      opacity: 0;
+      animation: ${animaLine} 1.5s ease-in 2s  forwards alternate;
     }
   }
 `;
@@ -94,7 +147,7 @@ export const ListItem = styled.li`
     letter-spacing: 2.7px;
     margin-right: 11px;
   }
-  @media screen and (max-width: ${theme.font.responsiveDevice.w1024}){
+  @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     span {
       display: none;
     }

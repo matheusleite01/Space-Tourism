@@ -17,11 +17,10 @@ const NavLink = ({
 }: NavlinkProps) => {
   const pathname = usePathname();
   const active = pathname === props.href;
-  console.log(isOpen);
 
   return (
     <Link
-      className={`${active ? activeClassname : ""} ${isOpen ? "open" : ""}`}
+      className={`${active ? activeClassname : ""} ${isOpen ? "open" : ""}`} onClick={() => setIsopen(false)}
       {...props}
     />
   );
