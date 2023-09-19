@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="description" content="Let’s face it; if you want to go to space" />
       </Helmet>
       <H.ImgBg>
-        <H.Container className="container">
+        <H.Container role="container" className="container">
           <H.TitleContainer>
             <p>SO, YOU WANT TO TRAVEL TO</p>
             <h1>SPACE</h1>
