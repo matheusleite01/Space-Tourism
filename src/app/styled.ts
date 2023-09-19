@@ -1,9 +1,19 @@
-import styled from "styled-components";
+import {styled, keyframes} from "styled-components";
 import { theme } from "../styles/theme";
 import imageDesktop from "../assets/home/background-home-desktop.png";
 import imageTablet from "../assets/home/background-home-tablet.png";
 import imageMobile from "../assets/home/background-home-mobile.png";
 
+const animaText = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+` 
 export const ImgBg = styled.section`
   position: fixed;
   top: 0;
@@ -46,6 +56,7 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  
 
   p:first-child {
     max-width: 100%;
@@ -53,6 +64,7 @@ export const TitleContainer = styled.div`
     font-size: ${theme.font.size.size_28px};
     color: ${theme.color.colorNeutral};
     letter-spacing: 4.725px;
+    animation: ${animaText} 1s ease-in-out forwards;
   }
 
   p {
@@ -61,6 +73,7 @@ export const TitleContainer = styled.div`
     font-size: ${theme.font.size.size_18px};
     color: ${theme.color.colorNeutral};
     line-height: 32px;
+    animation: ${animaText} 1s ease-in-out forwards;
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     align-items: center;
