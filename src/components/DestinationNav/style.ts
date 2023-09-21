@@ -1,5 +1,25 @@
-import styled from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { theme } from "../../styles/theme";
+
+const anima = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const animaTitle = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -16,6 +36,10 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.div`
+  img {
+    animation: ${anima} .7s  ease-in forwards;
+  }
+
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     img {
       max-width: 300px;
@@ -67,6 +91,7 @@ export const TitleDestination = styled.h2`
   font-family: ${theme.font.family.bellefair};
   font-size: ${theme.font.size.size_100px};
   margin-bottom: 14px;
+  animation: ${animaTitle} .5s ease-in forwards;
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     font-size: ${theme.font.size.size_80px};
     text-align: center;
@@ -86,6 +111,7 @@ export const PhraseDestination = styled.p`
   line-height: 32px;
   padding-bottom: 54px;
   border-bottom: 1px solid #383b4b;
+  animation: ${anima} .7s ease-in forwards;
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     max-width: 573px;
     padding-bottom: 49px;
@@ -108,7 +134,7 @@ export const ListContainer = styled.div`
     text-align: center;
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
-   flex-direction: column;
+    flex-direction: column;
     gap: 32px;
   }
 
@@ -118,6 +144,7 @@ export const ListContainer = styled.div`
     color: ${theme.color.colorNeutral};
     letter-spacing: 2.362px;
     text-transform: uppercase;
+    animation: ${animaTitle} .5s ease-in forwards;
   }
 
   p {
@@ -126,5 +153,7 @@ export const ListContainer = styled.div`
     color: ${theme.color.colorWhite};
     text-transform: uppercase;
     margin-top: 12px;
+   animation: ${anima} .8s ease-in forwards;
+
   }
 `;
