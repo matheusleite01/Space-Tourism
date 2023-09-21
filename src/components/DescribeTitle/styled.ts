@@ -1,11 +1,24 @@
 "use client";
-import styled from "styled-components";
+import {styled, keyframes} from "styled-components";
 import { theme } from "../../styles/theme";
+
+const animaText = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+`
 
 export const DescribeInfo = styled.div`
   display: flex;
   gap: 28px;
   margin-bottom: 64px;
+  animation: ${animaText} .5s ease-in forwards;
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
     justify-content: center;
     gap: 18px;
