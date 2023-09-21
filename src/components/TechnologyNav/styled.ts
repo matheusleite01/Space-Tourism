@@ -85,5 +85,14 @@ export const ImgContainer = styled.div`
   position: relative;
   right: -30px;
 } 
+@media screen and (max-width:${theme.font.responsiveDevice.w1024}){
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+} 
+
 
 `;
