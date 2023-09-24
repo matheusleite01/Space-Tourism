@@ -1,5 +1,15 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { theme } from "../../styles/theme";
+
+const animaSpan = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`
+
 
 export const Container = styled.div`
   display: flex;
@@ -78,9 +88,14 @@ export const TechnologySpan = styled.span`
   font-weight: 400;
   line-height: normal;
   letter-spacing: 2.7px;
+  animation: ${animaSpan} .8s ease-in forwards;
 `;
 
 export const ImgContainer = styled.div`
+img{
+  animation: ${animaSpan} 1s ease-in forwards;
+
+}
 @media screen and (min-width: 1400px){
   position: relative;
   right: -30px;
