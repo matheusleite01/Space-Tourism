@@ -31,9 +31,9 @@ export const Container = styled.div`
   align-items: center;
   @media screen and (max-width: ${theme.font.responsiveDevice.w1024}) {
     min-height: auto;
-    margin-top: 120px;
+    margin-top: 120px !important;
   }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
-    margin-top: 89px;
+    margin-top: 89px !important;
   }
 `;
