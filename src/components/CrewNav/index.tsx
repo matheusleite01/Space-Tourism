@@ -47,7 +47,7 @@ const CrewNav = () => {
       <S.InfoContainer>
         {creewInfoFilter.map(({ subtitle, title, paragraph }) => (
           <div key={subtitle}>
-            <S.SubTitle>{subtitle}</S.SubTitle>
+            <S.SubTitle role="subtitle">{subtitle}</S.SubTitle>
             <S.Title>{title}</S.Title>
             <S.Paragraph>{paragraph}</S.Paragraph>
           </div>
