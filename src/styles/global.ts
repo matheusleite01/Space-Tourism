@@ -49,6 +49,11 @@ body {
 }
 
 @media screen and (max-width:${theme.font.responsiveDevice.w1024}){
+  
+  .container {
+    padding: 0;
+  }
+
    a {
     font-size: ${theme.font.size.size_14px};
  

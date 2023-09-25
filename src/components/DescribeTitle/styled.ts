@@ -19,6 +19,9 @@ export const DescribeInfo = styled.div`
   gap: 28px;
   margin-bottom: 64px;
   animation: ${animaText} .5s ease-in forwards;
+  @media screen and (max-width: ${theme.font.responsiveDevice.w1024}){
+    padding: 0 1rem;
+  }
   @media screen and (max-width: ${theme.font.responsiveDevice.w760}) {
     justify-content: center;
     gap: 18px;
