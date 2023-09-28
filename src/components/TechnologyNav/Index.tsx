@@ -80,9 +80,9 @@ const TechnologyNav = () => {
         ))}
       </S.InfoContainer>
       <S.ImgContainer>
-        {value === '1' && <Image src={vehicle} alt="image-launch-vehicle-portrait.jpg" />}
-        {value === '2' && <Image src={spaceport} alt="image-launch-vehicle-portrait.jpg" />}
-        {value === '3' && <Image src={capsule} alt="image-launch-vehicle-portrait.jpg" />}
+        {value === '1' && <Image src={vehicle} alt="image-launch-vehicle.jpg" />}
+        {value === '2' && <Image src={spaceport} alt="image-launch-spaceport.jpg" />}
+        {value === '3' && <Image src={capsule} alt="image-launch-capsule.jpg" />}
       </S.ImgContainer>
     </S.Container>
   );
